@@ -1,0 +1,118 @@
+html{
+    background-color: #000;
+}
+body{
+    width: 80%;
+    margin: 20px auto;
+}
+body>div{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-radius: 30px;
+    background-color: #919191;
+}
+#matriz{
+    width: 60%;
+    height: calc(100vh - 40px);
+    padding: 30px;
+}
+#matriz>tbody>tr{
+    width: fit-content;
+}
+#controles{
+    width: 25%;
+    height: calc(100vh - 40px);
+    background-color: #818181;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+tr{
+    margin: 20px 0;
+}
+td{
+    border-collapse: separate;
+    border-spacing: 20px;
+    position: relative;
+}
+.cell{
+    margin: auto;
+    border-radius: 50%;
+    background-color: #FFF;
+    position: absolute;
+    top: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.8em;
+    box-sizing: border-box;
+}
+.cell.active{
+    border: 10px solid green;
+}
+.cell.active.pick{
+    border: 10px solid red;
+}
+button{
+    background-color: #aaa;
+    color: #000;
+    border-radius: 15px;
+}
+button:hover{
+    background-color: #111;
+    color: #FFF;
+    cursor: pointer;
+}
+.btn{
+    width: 120px;
+    height: 70px;
+    font-size: 2em;
+}
+input, select, textarea{
+    border:1px solid #ccc;
+    -ms-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    box-sizing:content-box;
+    -webkit-box-sizing:content-box; 
+    background-color: #aaa;
+    color: #000;
+    border-radius: 5px;
+}
+input::placeholder{
+    color: #000;
+}
+#edicao{
+    font-size: 1.8em;
+}
+#edicao>div>*{
+    height: 30px;
+    font-size: 0.8em;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+.qty{
+    position: absolute;
+    bottom: 15%;
+    font-size: 0.7em;
+}
+.output {
+    background-color: rgb(255, 128, 0);
+}
+.input {
+    background-color: rgb(0, 192, 255);
+}
+.subitem{
+    position: relative;
+    height: 45%;
+    min-width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}

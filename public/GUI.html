@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Analisador Bioquímico Automático</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div>
+            <table id="matriz">
+                <tbody>
+                </tbody>
+            </table>
+
+            <div id="controles">
+                <button class="btn" id="reset">Reset</button>
+                <button class="btn" id="run">Run ></button>
+                <div id='edicao'>
+                    <p>Row:<span id="linhaCel">0</span> Col:<span id="colunaCel">0</span>
+                    </p>
+                    <div>
+                        <select id="inOut">
+                            <option value="in">Input</option>
+                            <option value="out">Output</option>
+                        </select>
+                        <input type="number" placeholder="Group" id="group" min="0">
+                        <input type="number" placeholder="Quantity (ml)" id='qty' min="0" step="5">
+                        <button class='btn' id="submit">Submit</button>
+                        <button class='btn' id="add">Add</button>
+                        <button class='btn' id="resetCell">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+
+</html>
