@@ -53,9 +53,14 @@ td{
     box-sizing: border-box;
 }
 .cell.active{
+    padding: 0;
     border: 10px solid green;
 }
+.cell.active>.subitem, .cell.active.pick>.subitem{
+    height: 55%;
+}
 .cell.active.pick{
+    padding: 0;
     border: 10px solid red;
 }
 button{

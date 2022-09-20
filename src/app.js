@@ -3,7 +3,7 @@ import path from "path"
 import bodyParser from "body-parser";
 import { SerialPort, ReadlineParser } from "serialport";
 
-const PORT = 'COM3'
+const PORT = '/dev/ttyACM0'
 const serialport = new SerialPort({ path: PORT, baudRate: 9600 })
 const parser = serialport.pipe(new ReadlineParser({ delimiter: '\r\n' }))
 var lastPost = 'NotStarted'

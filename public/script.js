@@ -172,7 +172,7 @@ function postString(code) {
     xhr.open('POST', '/' + code);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send();
-    intervalCode = setInterval(getString, 500);
+    intervalCode = setInterval(getString, 50);
 }
 function getString(){
     let xhr = new XMLHttpRequest();
@@ -181,7 +181,10 @@ function getString(){
     xhr.send();
 }
 var currPos = '';
+var oldRead = "";
 function printString(pos){
+    if(oldRead == pos) return;
+    oldRead = pos;
     if(pos[0]== 'C'){
         if(currPos == pos) return;
         currPos = pos;
